@@ -12,10 +12,12 @@ Amplify.configure(awsExports);
 const initialState = { name: '', description: '' }
 
 const App = ({ signOut, user }) => {
+  console.log(user,"user")
   const [formState, setFormState] = useState(initialState)
   const [todos, setTodos] = useState([])
 
   useEffect(() => {
+    console.log("todos fetch")
     fetchTodos()
   }, [])
 
